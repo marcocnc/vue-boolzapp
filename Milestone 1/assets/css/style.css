@@ -143,6 +143,7 @@ li{
 .users-list .user{
     border-bottom: 1px solid rgb(232, 232, 232);
     padding: 10px;
+    cursor: pointer;
 }
 
 .users-list .user-image img{
@@ -180,6 +181,34 @@ li{
 
 .chat .chat-main{
     height: calc(100% - 140px);
+}
+
+.chat-messages .sent{
+    justify-content: flex-end;
+}
+
+.chat-messages .sent p{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    max-width: 65%;
+    border-radius: 10px;
+    background-color: #d5f9ba;
+}
+
+.chat-messages .received p{
+    font-size: 14px;
+    background-color: #fff;
+    max-width: 65%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.received{
+    justify-content: flex-start;
 }
 
 .chat .chat-footer{
