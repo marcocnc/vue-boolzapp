@@ -1,3 +1,4 @@
+/* General */
 *{
     padding: 0;
     margin: 0;
@@ -32,21 +33,27 @@ li{
     height: 100%;
     flex-shrink: 0;
     background-color: rgb(255, 255, 255);
+    border-right: 1px solid lightgray;
 }
 
 .chat{
     width: 65%;
     height: 100%;
-    background-color: #a4a4a4;
+    background-image: url(../img/mine.jpg);
 }
+/* /General */
 
-.side-bar header{
+/* Side bar */
+.side-bar header,
+.chat header{
     height: 70px;
     background-color: #EAEAEA;
 }
 
+/* Me */
 .aside-image img,
-.users-list .user img{
+.users-list .user img,
+.contact-image img{
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -55,12 +62,15 @@ li{
     margin-left: 10px;
 }
 
-.aside-icons i{
+.aside-icons i,
+.contact-icons,
+.chat footer i{
     font-size: 20px;
     color: #B1B1B1;
     cursor: pointer;
 }
 
+/* Notifications */
 .notifications{
     height: 70px;
     background-color: hsl(198.55deg 94.83% 77.25%);
@@ -71,7 +81,7 @@ li{
     background-color: #f2fbff;
     color: hsl(198.55deg 94.83% 77.25%);
     font-size: 24px;
-    padding: 10px;
+    padding: 12px 10px;
 }
 
 .notifications-text{
@@ -91,6 +101,7 @@ li{
     cursor: pointer;
 }
 
+/* Search */
 .input-search{
     height: 50px;
     background-color: #fafafa;
@@ -121,6 +132,8 @@ li{
     border: none;
 }
 
+
+/* Users list */
 .users-list{
     height: calc(100% - 190px);
     background-color: #ffffff;
@@ -147,4 +160,44 @@ li{
     font-size: 11px;
     color: #c3c6c9;
     margin-right: 10px;
+}
+
+.contact{
+    width: 100%;
+}
+
+.contact ul li:last-child{
+    color: #b1b1b1;
+    font-size: 14px;
+}
+
+.contact-icons{
+    width: 10%;
+}
+/* /Side bar */
+
+/* Chat side */
+
+.chat .chat-main{
+    height: calc(100% - 140px);
+}
+
+.chat .chat-footer{
+    height: 70px;
+    background-color: #F3EEEA;
+}
+
+.input-message{
+    width: 80%;
+}
+
+.input-message input{
+    width: 100%;
+    padding: 18px 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.chat footer i{
+    color: #6b7376;
 }
