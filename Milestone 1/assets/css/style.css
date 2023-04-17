@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
+
 .main-wrapper{
     height: 100vh;
     background: rgb(210,210,219);
@@ -11,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
@@ -26,11 +31,120 @@
     width: 35%;
     height: 100%;
     flex-shrink: 0;
-    background-color: rgb(0, 238, 255);
+    background-color: rgb(255, 255, 255);
 }
 
 .chat{
     width: 65%;
     height: 100%;
     background-color: #a4a4a4;
+}
+
+.side-bar header{
+    height: 70px;
+    background-color: #EAEAEA;
+}
+
+.aside-image img,
+.users-list .user img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.aside-icons i{
+    font-size: 20px;
+    color: #B1B1B1;
+    cursor: pointer;
+}
+
+.notifications{
+    height: 70px;
+    background-color: hsl(198.55deg 94.83% 77.25%);
+}
+
+.bell i{
+    border-radius: 50%;
+    background-color: #f2fbff;
+    color: hsl(198.55deg 94.83% 77.25%);
+    font-size: 24px;
+    padding: 10px;
+}
+
+.notifications-text{
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.notifications-text span:first-child{
+    font-size: 13px;
+}
+
+.notifications-text span:last-child{
+    font-size: 12px;
+    color: #b1b1b1;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input-search{
+    height: 50px;
+    background-color: #fafafa;
+    color: #b1b1b1;
+    width: 100%;
+}
+
+
+.input-search-icon{
+    border-right: none;
+    padding: 3.5px 15px;
+    border: 1px solid lightgray;
+}
+
+.input-search-icon i{
+    font-size: 0.9rem;
+}
+
+.input{
+    width: 90%;
+    border: 1px solid lightgray;
+    margin-right: 10px;
+}
+
+.input input{
+    width: 100%;
+    padding: 5px 15px;
+    border: none;
+}
+
+.users-list{
+    height: calc(100% - 190px);
+    background-color: #ffffff;
+    overflow: scroll;
+}
+
+.users-list .user{
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding: 10px;
+}
+
+.users-list .user-image img{
+    width: 70px;
+    height: 70px;
+}
+
+.user-info li:last-child{
+    /* padding-top: 2px; */
+    color: #c3c6c9;
+    font-size: 12px;
+}
+
+.hour span{
+    font-size: 11px;
+    color: #c3c6c9;
+    margin-right: 10px;
 }

@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/utilities.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Vue Boolzapp</title>
 </head>
@@ -20,11 +23,65 @@
                 <!-- Side bar with chat list -->
                 <aside class="side-bar">
 
-                </aside>
+                    <header class="d-flex space-between items-center">
+                        <div class="aside-image">
+                            <img src = "assets/img/avatar_io.jpg" alt="avatar_io">
+                            <span> Io </span>
+                        </div>
 
-                <div class="chat">
+                        <div class="aside-icons">
+                            <i class="fa-sharp fa-solid fa-circle-notch pr-10"></i>
+                            <i class="fa-solid fa-message pr-10"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pr-10"></i>
+                        </div>
+                    </header>
                     
+                    <!-- Notifications -->
+                    <div class="notifications d-flex items-center">
+                        <div class="bell">
+                            <i class="fa-solid fa-bell-slash ml-10"></i>
+                        </div>
+                        <div class="notifications-text">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+                    </div>
+
+                    <!-- Input -->
+                    <div class="input-search d-flex items-center pl-10">
+                        <div class="input-search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="input">
+                            <input id="search-user" type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
+                    <section class="users-list">
+                        <div class="user d-flex space-between">
+                            <div class="user-col d-flex items-center">
+                                <div class="user-image">
+                                    <img src = "assets/img/avatar_io.jpg" alt="avatar_io">
+                                </div>
+                                <ul class="user-info ml-10">
+                                    <li>Nome</li>
+                                    <li>Messaggio</li>
+                                </ul>
+                            </div>
+
+                            <div class="hour">
+                                <span>12:00</span>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    
+                    
+                </aside>
+                <div class="chat">
+
                 </div>
+
             </main>
         </div>
     </div>
