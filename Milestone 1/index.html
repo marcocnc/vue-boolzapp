@@ -8,6 +8,10 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/utilities.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -59,14 +63,14 @@
 
                     <!-- User list -->
                     <section class="users-list">
-                        <div class="user d-flex space-between">
+                        <div class="user d-flex space-between" v-for = " contact in contacts">
                             <div class="user-col d-flex items-center">
-                                <div class="user-image">
-                                    <img src = "assets/img/avatar_io.jpg" alt="avatar_io">
+                                <div class="user-image" >
+                                    <img :src = "contact.avatar">
                                 </div>
                                 <ul class="user-info ml-10">
-                                    <li>Nome</li>
-                                    <li>Messaggio</li>
+                                    <li>{{contact.name}}</li>
+                                    <li> {{contact.messages[contact.messages.length - 1].message }} </li>
                                 </ul>
                             </div>
 
@@ -98,14 +102,14 @@
                             </div>
                         </div>
                     </header>
-                    
+
                     <main class="chat-main">
                         <div class="chat-messages d-flex flex-col">
                             <div class="sent d-flex">
-                                <p>Forza Napoli</p>
+                                <p></p>
                             </div>
                             <div class="received d-flex">
-                                <p>lorem ipsum</p>
+                                <p></p>
                             </div>
                         </div>
                     </main>

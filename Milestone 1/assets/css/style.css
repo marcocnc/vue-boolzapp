@@ -192,6 +192,7 @@ li{
     margin-top: 20px;
     margin-right: 20px;
     padding: 20px;
+    min-width: 10%;
     max-width: 65%;
     border-radius: 10px;
     background-color: #d5f9ba;
@@ -200,6 +201,7 @@ li{
 .chat-messages .received p{
     font-size: 14px;
     background-color: #fff;
+    min-width: 10%;
     max-width: 65%;
     margin-top: 20px;
     margin-left: 20px;
@@ -229,4 +231,8 @@ li{
 
 .chat footer i{
     color: #6b7376;
+}
+
+.selected{
+    background-color: #E9EBEB;
 }
