@@ -4,3 +4,33 @@
     box-sizing: border-box;
 }
 
+.main-wrapper{
+    height: 100vh;
+    background: rgb(210,210,219);
+    background: linear-gradient( 0deg, rgba(219,219,210,1) 82%, rgba(0, 150,136,1) 82%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 90%;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.side-bar{
+    width: 35%;
+    height: 100%;
+    flex-shrink: 0;
+    background-color: rgb(0, 238, 255);
+}
+
+.chat{
+    width: 65%;
+    height: 100%;
+    background-color: #a4a4a4;
+}
