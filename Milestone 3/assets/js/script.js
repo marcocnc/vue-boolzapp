@@ -212,11 +212,25 @@ createApp({
                 console.warn('nessun messaggio');
             }else{
                 this.contacts[this.index].messages.push(newObjMsg)
-                
+                this.answer()
             }
                 
 
             this.msgInput = '';
+
+        },
+
+        answer(){
+            setTimeout(() => {
+                const answer = {
+                    date: '10/01/2020',
+                    hour: '15:51',
+                    message: 'Ok',
+                    status: 'received'
+                }
+
+                this.contacts[this.index].messages.push(answer)
+            }, 1000);
 
         }
     }
