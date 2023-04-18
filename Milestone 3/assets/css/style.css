@@ -194,11 +194,12 @@ li{
 .chat-messages .message{
     padding: 20px 50px 20px 20px;
     min-width: 10%;
-    max-width: 35%;
+    max-width: 60%;
     border-radius: 10px;
     font-size: 14px;
     margin-top: 20px;
     position: relative;
+    word-wrap: break-word;
 }
 
 .chat-messages .message.sent{
