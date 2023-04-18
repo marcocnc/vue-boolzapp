@@ -23,6 +23,7 @@ li{
     height: 90%;
     width: 80%;
     max-width: 1200px;
+    min-width: 600px;
     margin: 0 auto;
     display: flex;
 }
@@ -40,6 +41,7 @@ li{
     width: 65%;
     height: 100%;
     background-image: url(../img/mine.jpg);
+    
 }
 /* /General */
 
@@ -181,6 +183,7 @@ li{
 
 .chat .chat-main{
     height: calc(100% - 140px);
+    overflow-y: scroll;
 }
 
 .chat-messages .sent{
