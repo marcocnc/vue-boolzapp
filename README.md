@@ -5,16 +5,15 @@ Replica della grafica con la possibilità di avere messaggi scritti dall’utent
 Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto <br>
 
 ### Logica Milestone 1
-1.
-2.
-3.
-4.
-5.
-6.
+1. Creare tutto il markup;
+2. Creare l'array di oggetti contenente nome, immagine, una flag e i messaggi (che a sua volta è un array di oggetti contenente la data, il messaggio e lo status se sent o received);
+3. Ora la lista che abbiamo stampato a mano sul file HTML le andremo a stampare dinamicamente con una direttiva v-for: questa direttiva andrà assegnata alla singola "card" del contatto, in cui stamperemo tutti gli indici delle immagini, i nomi e l'ultimo messaggio inviato (che sarà uguale alla lunghezza dell'array messages nell'array contact -1.message che sarà la chiave che ci serve)
+
 
 <strong>Milestone 2</strong> <br>
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione <br>
 Click sul contatto mostra la conversazione del contatto cliccato
+### Logica 2
 
 
 <strong>Milestone 3</strong> <br>
