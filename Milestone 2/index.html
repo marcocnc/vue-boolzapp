@@ -63,7 +63,10 @@
 
                     <!-- User list -->
                     <section class="users-list">
-                        <div class="user d-flex space-between" v-for = " contact in contacts">
+                        <div
+                          class="user d-flex space-between"
+                          v-for= " (contact, userIndex) in contacts"
+                          @click="showContact(userIndex)">
                             <div class="user-col d-flex items-center">
                                 <div class="user-image" >
                                     <img :src = "contact.avatar">
@@ -89,10 +92,10 @@
                     <header class="d-flex space-between items-center">
                         <div class="contact d-flex space-between">
                             <div class="contact-image d-flex">
-                                <img src = "assets/img/avatar_io.jpg" alt="avatar_io">
+                                <img :src = "contacts[index].avatar" alt="avatar_io">
                                 <ul class="pl-10">
-                                    <li>Io</li>
-                                    <li>ultimo accesso</li>
+                                    <li>{{contacts[index].name}}</li>
+                                    <li></li>
                                 </ul>
                             </div>
                             <div class="contact-icons mr-10 d-flex space-between items-center">
@@ -109,7 +112,7 @@
                                 <p></p>
                             </div>
                             <div class="received d-flex flex-col">
-                                <p>aaaaaa</p>
+                                <p></p>
                             </div>
                         </div>
                     </main>

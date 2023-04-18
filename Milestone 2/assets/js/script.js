@@ -165,8 +165,15 @@ createApp({
                         }
                     ],
                 }
-            ]
-            
+            ],
+            index: 0,
+        }
+
+    },
+    methods:{
+        showContact(i){
+            this.index = i
         }
     }
+    
 }).mount('#app')

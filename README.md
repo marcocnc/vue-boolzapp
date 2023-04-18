@@ -14,6 +14,7 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visua
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione <br>
 Click sul contatto mostra la conversazione del contatto cliccato
 ### Logica 2
+Si crea un counter (che si potrebbe chiamare userActive) nel ciclo for che si fa nel div user e al click di quella "card" il lato dx sarà uguale all'indice attivo di quell'array
 
 
 <strong>Milestone 3</strong> <br>
