@@ -1,0 +1,40 @@
+.d-flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.pr-10{
+    padding-right: 10px;
+}
+
+.pr-20{
+    padding-right: 20px;
+}
+
+.pl-10{
+    padding-left: 10px;
+}
+
+.pl-20{
+    padding-left: 20px;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
+.mr-10{
+    margin-right: 10px;
+}
+

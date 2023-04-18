@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Vue Boolzapp</title>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="main-wrapper">
+
+            <main class="container">
+
+                <!-- Side bar with chat list -->
+                <aside class="side-bar">
+
+                    <header class="d-flex space-between items-center">
+                        <div class="aside-image">
+                            <img src = "assets/img/avatar_io.jpg" alt="avatar_io">
+                            <span> Io </span>
+                        </div>
+
+                        <div class="aside-icons">
+                            <i class="fa-sharp fa-solid fa-circle-notch pr-10"></i>
+                            <i class="fa-solid fa-message pr-10"></i>
+                            <i class="fa-solid fa-ellipsis-vertical pr-10"></i>
+                        </div>
+                    </header>
+                    
+                    <!-- Notifications -->
+                    <div class="notifications d-flex items-center">
+                        <div class="bell">
+                            <i class="fa-solid fa-bell-slash ml-10"></i>
+                        </div>
+                        <div class="notifications-text">
+                            <span>Ricevi notifiche di nuovi messaggi</span>
+                            <span>Attiva notifiche desktop</span>
+                        </div>
+                    </div>
+
+                    <!-- Input -->
+                    <div class="input-search d-flex items-center pl-10">
+                        <div class="input-search-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div class="input">
+                        <input id="search-user"  placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                    </div>
+
+                    <!-- User list -->
+                    <section class="users-list">
+                        <div
+                          class="user d-flex space-between"
+                          v-for= " (contact, userIndex) in contacts"
+                          @click="showContact(userIndex)">
+                            <div class="user-col d-flex items-center">
+                                <div class="user-image" >
+                                    <img :src = "contact.avatar">
+                                </div>
+                                <ul class="user-info ml-10">
+                                    <li>{{contact.name}}</li>
+                                    <li> {{contact.messages[contact.messages.length - 1].message }} </li>
+                                </ul>
+                            </div>
+
+                            <div class="hour">
+                                <span>12:00</span>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    
+                    
+                </aside>
+
+                <!-- Chat -->
+                <div class="chat">
+                    <header class="d-flex space-between items-center">
+                        <div class="contact d-flex space-between">
+                            <div class="contact-image d-flex">
+                                <img :src = "contacts[index].avatar" alt="avatar_io">
+                                <ul class="pl-10">
+                                    <li>{{contacts[index].name}}</li>
+                                    <li>Ultimo accesso oggi alle 12:00</li>
+                                </ul>
+                            </div>
+                            <div class="contact-icons mr-10 d-flex space-between items-center">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <i class="fa-solid fa-paperclip"></i>
+                                <i class="fa-solid fa-ellipsis-vertical pr-10"></i>
+                            </div>
+                        </div>
+                    </header>
+
+                    <main class="chat-main">
+                        <div class="chat-messages d-flex flex-col">
+                            <div class="message"
+                            :class="contact.status" v-for="contact in contacts[index].messages">
+                                <p>{{contact.message}}</p>
+                                <span>{{contact.hour}}</span>
+                               
+                                
+                            </div>
+                        </div>
+                    </main>
+
+                    <footer class="chat-footer d-flex space-between items-center">
+                        <div id="smile" class="d-flex pl-20">
+                            <i class="fa-regular fa-face-smile"></i>
+                        </div>
+                        <div class="input-message">
+                            <input v-model="msgInput" type="text" @keyup.enter="newMsg()"  type="text" placeholder="Scrivi un messaggio...">
+                        </div>
+                        <div id="microphone" class="pr-20">
+                            <i class="fa-solid fa-microphone"></i>
+                        </div>
+                    </footer>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

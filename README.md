@@ -14,12 +14,14 @@ Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visua
 Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione <br>
 Click sul contatto mostra la conversazione del contatto cliccato
 ### Logica 2
-Si crea un counter (che si potrebbe chiamare userActive) nel ciclo for che si fa nel div user e al click di quella "card" il lato dx sarà uguale all'indice attivo di quell'array
+
 
 
 <strong>Milestone 3</strong> <br>
 Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde <br>
 Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo. <br>
+### Logica 3
+
 <strong>Milestone 4</strong> <br>
 Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina) <br>
 
