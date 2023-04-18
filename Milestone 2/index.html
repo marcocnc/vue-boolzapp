@@ -95,7 +95,7 @@
                                 <img :src = "contacts[index].avatar" alt="avatar_io">
                                 <ul class="pl-10">
                                     <li>{{contacts[index].name}}</li>
-                                    <li></li>
+                                    <li>Ultimo accesso oggi alle 12:00</li>
                                 </ul>
                             </div>
                             <div class="contact-icons mr-10 d-flex space-between items-center">
@@ -108,11 +108,12 @@
 
                     <main class="chat-main">
                         <div class="chat-messages d-flex flex-col">
-                            <div class="sent d-flex">
-                                <p></p>
-                            </div>
-                            <div class="received d-flex flex-col">
-                                <p></p>
+                            <div class="message"
+                            :class="contact.status" v-for="contact in contacts[index].messages">
+                                <p>{{contact.message}}</p>
+                                <span>{{contact.hour}}</span>
+                               
+                                
                             </div>
                         </div>
                     </main>

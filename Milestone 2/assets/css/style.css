@@ -172,6 +172,7 @@ li{
 .contact ul li:last-child{
     color: #b1b1b1;
     font-size: 14px;
+    padding-top: 5px;
 }
 
 .contact-icons{
@@ -186,34 +187,37 @@ li{
     overflow-y: scroll;
 }
 
-.chat-messages .sent{
-    justify-content: flex-end;
+.chat-messages{
+    padding: 0 20px;
 }
 
-.chat-messages .sent p{
+.chat-messages .message{
+    padding: 20px 50px 20px 20px;
+    min-width: 10%;
+    max-width: 35%;
+    border-radius: 10px;
     font-size: 14px;
     margin-top: 20px;
-    margin-right: 20px;
-    padding: 20px;
-    min-width: 10%;
-    max-width: 65%;
-    border-radius: 10px;
-    background-color: #d5f9ba;
+    position: relative;
 }
 
-.chat-messages .received p{
-    font-size: 14px;
+.chat-messages .message.sent{
+    align-self: flex-end;
+    background-color: #d5f9ba
+}
+
+.chat-messages .message.received{
+    align-self: flex-start;
     background-color: #fff;
-    min-width: 10%;
-    max-width: 65%;
-    margin-top: 20px;
-    margin-left: 20px;
-    border-radius: 10px;
-    padding: 20px;
 }
 
-.received{
-    justify-content: flex-start;
+.chat-messages .message span{
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(181, 181, 181);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .chat .chat-footer{
