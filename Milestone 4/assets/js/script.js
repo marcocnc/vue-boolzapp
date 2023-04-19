@@ -237,7 +237,13 @@ createApp({
     },
 
     computed:{
-        
+       
+
+        filteredContact(){
+            return this.contacts.forEach(contact =>{
+                contact.visible = contact.name.toLowerCase().includes(this.searchBar.toLowerCase())
+            })
+        }
     }
     
 }).mount('#app')
